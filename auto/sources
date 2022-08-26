@@ -2,10 +2,12 @@
 # Copyright (C) Igor Sysoev
 
 
+# 核心模块
 CORE_MODULES="ngx_core_module ngx_errlog_module ngx_conf_module"
 
 CORE_INCS="src/core"
 
+# 核心头文件
 CORE_DEPS="src/core/nginx.h \
            src/core/ngx_config.h \
            src/core/ngx_core.h \
@@ -30,6 +32,7 @@ CORE_DEPS="src/core/nginx.h \
 #           src/core/ngx_radix_tree.h \
 #           src/core/ngx_radix_tree.c \
 
+# 核心C代码
 CORE_SRCS="src/core/nginx.c \
            src/core/ngx_log.c \
            src/core/ngx_palloc.c \
@@ -50,10 +53,12 @@ CORE_SRCS="src/core/nginx.c \
            src/core/ngx_garbage_collector.c"
 
 
+# 正则相关
 REGEX_DEPS=src/core/ngx_regex.h
 REGEX_SRCS=src/core/ngx_regex.c
 
 
+# 事件模块
 EVENT_MODULES="ngx_events_module ngx_event_core_module"
 
 EVENT_INCS="src/event src/event/modules"

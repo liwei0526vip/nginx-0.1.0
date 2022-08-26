@@ -3,8 +3,10 @@
 # Copyright (C) Igor Sysoev
 
 
+# 解析选项参数
 . auto/options
 . auto/init
+# 源代码
 . auto/sources
 
 test -d $OBJS || mkdir $OBJS
@@ -23,9 +25,12 @@ if [ "$PLATFORM" != win32 ]; then
 fi
 
 . auto/os/conf
+# 生成ngx_modules.c
 . auto/modules
 
+# 编译器优化
 . auto/cc
+# 第三方库
 . auto/lib/conf
 
 if [ "$PLATFORM" != win32 ]; then
